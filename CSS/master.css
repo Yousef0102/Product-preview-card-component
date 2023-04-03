@@ -1,0 +1,112 @@
+/* Global Rules */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--Cream);
+}
+/* Start The Design */
+main {
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--White);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+main .dsk-img {
+  width: 300px;
+  max-width: 100%;
+}
+main .mob-img {
+  display: none;
+}
+main .details {
+  width: 300px;
+  padding: 15px;
+}
+main .details h6 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--Dark-grayish-blue);
+}
+main .details h1 {
+  font-family: "Fraunces", serif;
+  font-size: 36px;
+  margin-top: 15px;
+}
+main .details p {
+  margin-top: 20px;
+  color: var(--Dark-grayish-blue);
+  line-height: 1.6;
+}
+main .details span {
+  display: block;
+  margin-top: 20px;
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--Dark-cyan);
+  position: relative;
+}
+main .details span::after {
+  content: "$169.99";
+  position: absolute;
+  font-size: 11px;
+  top: 7px;
+  left: 40%;
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+main .details button {
+  margin: 20px auto;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--White);
+  background-color: var(--Dark-cyan);
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+main .details button:hover {
+  background-color: hsl(158, 39%, 17%);
+  cursor: pointer;
+}
+/* End The Design */
+/* Start Media */
+@media (max-width: 640px) {
+  main {
+    width: 350px;
+    height: 100%;
+    flex-direction: column;
+  }
+  main .dsk-img {
+    display: none;
+  }
+  main .mob-img {
+    display: block;
+    width: 350px;
+    max-width: 100%;
+  }
+}
+/* End Media */
